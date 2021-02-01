@@ -28,21 +28,7 @@ class ViewController: UIViewController {
         
         // calendar
         //DateComponents()
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        
-        let calendar = Calendar.current
-        
-        var dateComponent = DateComponents()
-        
-        dateComponent.day = Int(dayTextField.text ?? "01")
-        dateComponent.month = Int(monthTextField.text ?? "01")
-        dateComponent.year = Int(yearTextField.text ?? "2021")
-        
-        let day = calendar.date(from: dateComponent)
-        
-        
+       
         //
         // dateComponents.day = daytextfielt.text
         // calendar.date(from: dateComponents
