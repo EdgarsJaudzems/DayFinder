@@ -19,14 +19,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-RD-S88">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1vL-KT-5S8">
+                                <rect key="frame" x="122.5" y="283" width="169.5" height="69.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGm-gr-ybC">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <color key="textColor" red="0.98313515080000002" green="1" blue="0.9233510492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uc-Df-F9H">
+                                        <rect key="frame" x="28.5" y="49" width="112.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.98313515080000002" green="1" blue="0.9233510492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KhZ-RD-S88" secondAttribute="bottom" constant="-34" id="JEE-aC-8IK"/>
-                            <constraint firstItem="KhZ-RD-S88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="L0S-fM-Pbj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KhZ-RD-S88" secondAttribute="trailing" id="nYn-n0-c2m"/>
-                            <constraint firstItem="KhZ-RD-S88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oje-UF-dYZ"/>
+                            <constraint firstItem="1vL-KT-5S8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="239" id="KZJ-22-rrg"/>
+                            <constraint firstItem="KhZ-RD-S88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ogx-C6-a90"/>
+                            <constraint firstItem="KhZ-RD-S88" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cr4-ST-wT1"/>
+                            <constraint firstAttribute="bottom" secondItem="KhZ-RD-S88" secondAttribute="bottom" id="eZP-dZ-DtP"/>
+                            <constraint firstItem="KhZ-RD-S88" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xqy-Jl-cO8"/>
+                            <constraint firstItem="1vL-KT-5S8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zIh-Mu-dfN"/>
                         </constraints>
                     </view>
                 </viewController>
