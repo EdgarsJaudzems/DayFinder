@@ -96,6 +96,11 @@
                                 <state key="normal" title="Find">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="findWeekDayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Iz-9s-4fe"/>
                                 </connections>
