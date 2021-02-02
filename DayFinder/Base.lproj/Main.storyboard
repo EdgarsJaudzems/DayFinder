@@ -88,13 +88,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7n-qv-RS9">
                                 <rect key="frame" x="103" y="764" width="208" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.99125832319999996" green="0.66859936710000001" blue="0.39128541950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="rXi-5K-65a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Find">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -135,7 +135,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="info" catalog="system" id="7oK-WQ-MXy">
                             <color key="tintColor" red="0.98313515080000002" green="1" blue="0.9233510492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="moT-Vw-6oe" kind="show" id="ma4-gB-9hN"/>
+                                <segue destination="moT-Vw-6oe" kind="show" identifier="dayFinder" id="ma4-gB-9hN"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="lightbulb.fill" catalog="system" id="wXf-Sv-OCR">
@@ -157,11 +157,11 @@
             </objects>
             <point key="canvasLocation" x="710.14492753623199" y="73.660714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Appearance View Controller-->
         <scene sceneID="l8j-qf-IEz">
             <objects>
-                <viewController id="2km-Fo-u9w" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GHb-GM-ipL">
+                <viewController id="2km-Fo-u9w" customClass="AppearanceViewController" customModule="DayFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GHb-GM-ipL" customClass="Ap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -190,9 +190,30 @@
                                         <state key="normal" title="Open settings">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openSettingsButtonTapped:" destination="2km-Fo-u9w" eventType="touchUpInside" id="C1V-Wb-nOm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMr-6b-FXq">
+                                <rect key="frame" x="304" y="20" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="multiply.square" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="2km-Fo-u9w" eventType="touchUpInside" id="2EA-r5-4eM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uMr-1v-cR2"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -201,22 +222,57 @@
                             <constraint firstItem="Vee-1n-wcI" firstAttribute="centerX" secondItem="GHb-GM-ipL" secondAttribute="centerX" id="bqG-qw-Xkv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="abm-A1-LM7" id="Ng0-hu-p1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIZ-L8-t6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1553.6231884057972" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--App Info View Controller-->
         <scene sceneID="4ka-nO-1vD">
             <objects>
-                <viewController id="moT-Vw-6oe" sceneMemberID="viewController">
+                <viewController id="moT-Vw-6oe" customClass="AppInfoViewController" customModule="DayFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YUK-HQ-Qix">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iB-Kv-5PA">
+                                <rect key="frame" x="157" y="423" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9WS-tP-Bj2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="SVU-iE-dkV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGP-yx-pvx">
+                                <rect key="frame" x="146" y="584" width="122.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Gx-oQ-RQ1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4MW-lm-Vv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cVw-Cv-5Bw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cVw-Cv-5Bw" firstAttribute="bottom" secondItem="FGP-yx-pvx" secondAttribute="bottom" constant="228" id="HR0-Vt-L3w"/>
+                            <constraint firstItem="2iB-Kv-5PA" firstAttribute="centerX" secondItem="YUK-HQ-Qix" secondAttribute="centerX" id="QO3-37-dga"/>
+                            <constraint firstItem="FGP-yx-pvx" firstAttribute="centerX" secondItem="2iB-Kv-5PA" secondAttribute="centerX" id="TVf-Fu-C7H"/>
+                            <constraint firstItem="2iB-Kv-5PA" firstAttribute="centerY" secondItem="YUK-HQ-Qix" secondAttribute="centerY" id="WWp-7H-b13"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="58O-wG-Qvb"/>
+                    <connections>
+                        <outlet property="appDescLabel" destination="FGP-yx-pvx" id="1jt-Cd-lQh"/>
+                        <outlet property="appInfoLabel" destination="2iB-Kv-5PA" id="66U-h9-EY0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Td8-eN-XcO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +306,7 @@
     <resources>
         <image name="info" catalog="system" width="93" height="128"/>
         <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <image name="multiply.square" catalog="system" width="128" height="114"/>
         <image name="night" width="658" height="1432"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
