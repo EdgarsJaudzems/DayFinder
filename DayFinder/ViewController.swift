@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var findButton: UIButton!
     
+    var buttonPressedBool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         findButton.layer.cornerRadius = 20
@@ -30,23 +32,37 @@ class ViewController: UIViewController {
         dateComponents.day = Int(dayTextField.text ?? "02")
         dateComponents.month = Int(monthTextField.text ?? "02")
         dateComponents.year = Int(yearTextField.text ?? "2021")
-
+        
         let date = calendar.date(from: dateComponents)
   
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        //dateFormatter.dateFormat = "dd.MM.yyyy"
         dateFormatter.dateFormat = "EEEE"
         let weekday = dateFormatter.string(from: date!)
+        
 
         if dateComponents.day != nil && dateComponents.month != nil && dateComponents.year != nil  {
             resultLabel.text = "That is \(weekday)!!!"
-            findButton.setTitle("Clear", for: .normal)
+            
         } else {
             resultLabel.text = "Enter a day, month and year!"
         }
-
+        
+        if buttonPressedBool == false {
+            buttonPressedBool = true
+            findButton.setTitle("Clear", for: .normal)
+        } else {
+            buttonPressedBool = false
+            findButton.setTitle("Find", for: .normal)
+            dayTextField.text = nil
+            monthTextField.text = nil
+            yearTextField.text = nil
+            resultLabel.text = "Enter a day, month and year!"
+        }
+  
     }
     
+ 
 }
 
