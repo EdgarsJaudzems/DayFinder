@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             clearAllTextFields()
         }
         
+//        My version for HW
 //        let calendar = Calendar.current
 //
 //        var dateComponents = DateComponents()
@@ -147,7 +148,7 @@ class ViewController: UIViewController {
             // Get the new view controller using segue.destination.
             let vc = segue.destination as! AppInfoViewController
             // Pass the selected object to the new view controller.
-            vc.infoText = "DayFinder helps to find exact weekday for given date."
+            vc.infoText = "DayFinder helps to find \nexact weekday for given date."
         }
         
         
